@@ -1,71 +1,69 @@
-# sails-developer-toolkit README
+# Sails Developer Toolkit
 
-This is the README for your extension "sails-developer-toolkit". After writing up a brief description, we recommend including the following sections.
+A Visual Studio Code extension designed to simplify project checks, build validation, and troubleshooting for Sails smart contracts on Vara.
+
+**Status:** Prototype — end-to-end verification in progress.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Detect Project:** Detects Sails-related dependencies in a Cargo project.
+- **Check Project:** Inspects Rust files and identifies Sails-related dependencies and code patterns.
+- **Build Project:** Runs `cargo check` for the current workspace.
+- **Sails Doctor:** Combines project checks, Cargo validation, tests, artifact checks, and heuristic IDL checks.
+- **Insert Service Template:** Provides a starter template for Sails development. Safe file creation and end-to-end behavior still require verification.
 
-For example if there is an image subfolder under your extension project workspace:
+## Current Status
 
-\!\[feature X\]\(images/feature-x.png\)
+The extension has compiled successfully, and several commands have previously been tested against a sample Sails project.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+The complete extension workflow has not yet been verified. Extension activation and command discovery, template generation, automated test coverage, and clean-environment installation remain to be validated.
+
+This repository should be considered a development-stage prototype until those checks are complete.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Visual Studio Code
+- Node.js and npm for development
+- Rust and Cargo
+- A Sails project for testing project-specific commands
 
-## Extension Settings
+## Development Setup
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+Clone the repository and install dependencies:
 
-For example:
+```bash
+npm install
+```
 
-This extension contributes the following settings:
+Compile the extension:
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+```bash
+npm run compile
+```
 
-## Known Issues
+Run lint checks:
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+```bash
+npm run lint
+```
 
-## Release Notes
+To launch the extension in a development host, open the project in VS Code and press `F5`.
 
-Users appreciate release notes as you update your extension.
+## Commands
 
-### 1.0.0
+Open the VS Code Command Palette with `Command + Shift + P` on macOS and search for the Sails Developer Toolkit commands.
 
-Initial release of ...
+Available commands are intended to cover project detection, project checks, build execution, Sails Doctor, and template generation. Their complete behavior must be verified before a stable release is announced.
 
-### 1.0.1
+## License
 
-Fixed issue #.
+An open-source license has not yet been finalized. A license will be added before the initial public release.
 
-### 1.1.0
+## Contributing and Feedback
 
-Added features X, Y, and Z.
+Issues and suggestions are welcome. Feedback from Vara and Sails developers will help prioritize improvements and determine which workflows provide value beyond existing tools.
 
----
+## Project Links
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- **GitHub:** https://github.com/arkumta/sails-developer-toolkit-2
+- **Website:** https://sails-developer-toolkit-site.vercel.app/
